@@ -1,0 +1,37 @@
+{
+    "generation": "Advanced (Third)",
+    "region": "Hoenn",
+    "yearOfRelease": 2003,
+    "pokedex": [
+        {
+            "name": "Treecko",
+            "code": 252,
+            "type": "Grass",
+            "height": 0.5,
+            "abilities": [
+                "Overgrow",
+                "Unburden"
+            ]
+        },
+        {
+            "name": "Makuhita",
+            "code": 296,
+            "type": "Fighting",
+            "height": 1,
+            "abilities": [
+                "Thick Guts",
+                "Sheer Force"
+            ]
+        },
+        {
+            "name": "Gardevoir",
+            "code": 282,
+            "type": ["", ""],
+            "height": 1.6,
+            "abilities": [
+                "Synchronize",
+                "Telepathy"
+            ]
+        }
+    ]
+}
