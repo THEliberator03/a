@@ -1,36 +1,42 @@
 {
-    "generation": "Advanced (Third)",
-    "region": "Hoenn",
+    "generation": "Gold & Silver (Second)",
+    "region": "Johto",
     "yearOfRelease": 2003,
     "pokedex": [
         {
-            "name": "Treecko",
-            "code": 252,
+            "name": "Togepi",
+            "img": "images/Togepi.webp",
+            "code": 175,
+            "from": "None",
+            "type": "Fairy",
+            "height": 0.3,
+            "abilities": [
+                "Serene Grace",
+                "Super Luck"
+            ]
+        },
+        {
+            "name": "Chikorita",
+            "img": "images/152Chikorita.png",
+            "code": 152,
+            "from": "None",
             "type": "Grass",
-            "height": 0.5,
+            "height": 0.9,
             "abilities": [
                 "Overgrow",
-                "Unburden"
+                "Leaf Guard"
             ]
         },
         {
-            "name": "Makuhita",
-            "code": 296,
-            "type": "Fighting",
-            "height": 1,
+            "name": "Marill",
+            "img": "images/.png",
+            "code": 183,
+            "from": "Azurill",
+            "type": ["Water", "Fairy"],
+            "height": 0.4,
             "abilities": [
-                "Thick Guts",
-                "Sheer Force"
-            ]
-        },
-        {
-            "name": "Gardevoir",
-            "code": 282,
-            "type": ["", ""],
-            "height": 1.6,
-            "abilities": [
-                "Synchronize",
-                "Telepathy"
+                "Huge Power",
+                "Sap Sipper"
             ]
         }
     ]
