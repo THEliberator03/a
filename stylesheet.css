@@ -1,7 +1,50 @@
+header{
+    background-color: rgb(67, 218, 80);
+    padding: 5px;
+    font-family: "Public Sans", sans-serif;
+}
 .navbar{
     float: right;
+    background-color: rgb(67, 218, 80);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    border-radius: 7px;
+    
+}
+
+li.nav-item{
+    background-color: white;
+
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+li.nav-item:hover{
+    background-color: rgba(80, 135, 156, 0.623);
 }
 
 .headTitle{
     font-size: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+} 
+
+.card{
+    margin: 10px;
+    border-color: black;
+    border-top: 22px;
 }

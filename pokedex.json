@@ -1,42 +1,42 @@
 {
-    "generation": "Gold & Silver (Second)",
-    "region": "Johto",
-    "yearOfRelease": 2003,
+    "generation": "Color (First)",
+    "region": "Kanto",
+    "yearOfRelease": 1996,
     "pokedex": [
         {
-            "name": "Togepi",
-            "img": "images/Togepi.webp",
-            "code": 175,
+            "name": "Oddish",
+            "img": "images/43Oddish.png",
+            "code": 43,
             "from": "None",
-            "type": "Fairy",
-            "height": 0.3,
+            "type": ["Grass", "Poison"],
+            "height": 0.5,
             "abilities": [
-                "Serene Grace",
-                "Super Luck"
+                "Chlorophyll",
+                "Run Away"
             ]
         },
         {
-            "name": "Chikorita",
-            "img": "images/152Chikorita.png",
-            "code": 152,
+            "name": "Abra",
+            "img": "images/63Abra.png",
+            "code": 63,
             "from": "None",
-            "type": "Grass",
+            "type": "Physic",
             "height": 0.9,
             "abilities": [
-                "Overgrow",
-                "Leaf Guard"
+                "Inner Focus",
+                "Magic Guard"
             ]
         },
         {
-            "name": "Marill",
-            "img": "images/.png",
-            "code": 183,
-            "from": "Azurill",
-            "type": ["Water", "Fairy"],
+            "name": "Cubone",
+            "img": "images/104Cubone.png",
+            "code": 104,
+            "from": "None",
+            "type": "Ground",
             "height": 0.4,
             "abilities": [
-                "Huge Power",
-                "Sap Sipper"
+                "Rock Head",
+                "Battle Armor"
             ]
         }
     ]

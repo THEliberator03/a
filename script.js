@@ -1,22 +1,64 @@
 const head = document.querySelector('header')
-const main = document.querySelector('main')
-const foot = document.querySelector('footer')
-const gen1 = ''
+const gridSel = document.getElementsByClassName('grid')
+const grid = gridSel[0]
+const gen1 = `{
+    "generation": "Color (First)",
+    "region": "Kanto",
+    "yearOfRelease": 1996,
+    "pokedex": [
+        {
+            "name": "Oddish",
+            "img": "images/43Oddish.png",
+            "code": 43,
+            "from": "None",
+            "type": ["Grass", " Poison"],
+            "height": 0.5,
+            "abilities": [
+                "Chlorophyll",
+                " Run Away"
+            ]
+        },
+        {
+            "name": "Abra",
+            "img": "images/63Abra.png",
+            "code": 63,
+            "from": "None",
+            "type": "Physic",
+            "height": 0.9,
+            "abilities": [
+                "Inner Focus",
+                " Magic Guard"
+            ]
+        },
+        {
+            "name": "Cubone",
+            "img": "images/104Cubone.png",
+            "code": 104,
+            "from": "None",
+            "type": "Ground",
+            "height": 0.4,
+            "abilities": [
+                "Rock Head",
+                " Battle Armor"
+            ]
+        }
+    ]
+}`
 const gen2 = `{
     "generation": "Gold & Silver (Second)",
     "region": "Johto",
-    "yearOfRelease": 2003,
+    "yearOfRelease": 1999,
     "pokedex": [
         {
-            "name": "175Togepi",
-            "img": "images/Togepi.webp",
+            "name": "Togepi",
+            "img": "images/175Togepi.webp",
             "code": 175,
             "from": "None",
             "type": "Fairy",
             "height": 0.3,
             "abilities": [
                 "Serene Grace",
-                "Super Luck"
+                " Super Luck"
             ]
         },
         {
@@ -28,7 +70,7 @@ const gen2 = `{
             "height": 0.9,
             "abilities": [
                 "Overgrow",
-                "Leaf Guard"
+                " Leaf Guard"
             ]
         },
         {
@@ -36,11 +78,11 @@ const gen2 = `{
             "img": "images/183Marill.png",
             "code": 183,
             "from": "Azurill",
-            "type": ["Water", "Fairy"],
+            "type": ["Water", " Fairy"],
             "height": 0.4,
             "abilities": [
                 "Huge Power",
-                "Sap Sipper"
+                " Sap Sipper"
             ]
         }
     ]
@@ -59,7 +101,7 @@ const gen3 = `{
   			"height": 0.5,
             "abilities": [
     			"Overgrow",
-                "Unburden"
+                " Unburden"
     		]
 		},
         {
@@ -71,7 +113,7 @@ const gen3 = `{
             "height": 1,
             "abilities": [
                 "Thick Guts",
-                "Sheer Force"
+                " Sheer Force"
             ]
         },
         {
@@ -79,27 +121,45 @@ const gen3 = `{
             "img": "images/282Gardevoir.png",
         	"code": 282,
             "from": "Kirlia",
-            "type": ["Physic", "Fairy"],
+            "type": ["Physic", " Fairy"],
             "height": 1.6,
             "abilities": [
             	"Synchronize",
-                "Telepathy"
+                " Telepathy"
             ]
         }
     ]
 }`
 
-//const Jgen1 = JSON.parse(gen1)
+const Jgen1 = JSON.parse(gen1)
 const Jgen2 = JSON.parse(gen2)
 const Jgen3 = JSON.parse(gen3)
 
+changeGen(Jgen1)
+
 function changeGen(genElement){
+    const headDel = document.getElementsByClassName('Hdiv')
+    var headDelLength = headDel.length
+    const pokeDel = document.getElementsByClassName('card')
+    var pokeDelLength = pokeDel.length
+
+    for(var i = 0; i < headDelLength; i++){
+        var eleDel = headDel[i]
+        eleDel.remove()
+    }
+    for(var i = pokeDelLength - 1; i >= 0; i--){
+        var eleDel = pokeDel[i]
+        eleDel.remove()
+    }
+
 	createHeader(genElement)
 	showPokedex(genElement)
 }
 
+
 function createHeader(json){
 	const Hdiv = document.createElement('div')
+    Hdiv.className = "Hdiv"
 	
 	const title = document.createElement('h1')
 	title.textContent = json['generation'] + ' Gen Pokédex'
@@ -133,12 +193,12 @@ function showPokedex(json){
 		const body = document.createElement('div')
 		body.className = "card-body"
 
-		const pokeName = document.createElement('h5')
+		const pokeName = document.createElement('h4')
 		pokeName.textContent = pokedex[i].name
 		pokeName.className = "card-title"
 
 		const pokeCode = document.createElement('p')
-		pokeCode.textContent = 'Pokédex Code: ' + pokedex[i].code
+		pokeCode.textContent = 'Pokédex Code: #' + pokedex[i].code
 		pokeCode.className = "card-text"
 
 		const pokeType = document.createElement('p')
@@ -157,7 +217,7 @@ function showPokedex(json){
 		pokeAbilities.textContent = pokedex[i].abilities
 		pokeAbilities.className = "card-text"
 
-		main.appendChild(card)
+		grid.appendChild(card)
 		card.appendChild(pokeImg)
 		card.appendChild(body)
 		body.appendChild(pokeName)
