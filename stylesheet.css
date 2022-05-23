@@ -2,6 +2,7 @@ header{
     background-color: rgb(67, 218, 80);
     padding: 5px;
     font-family: "Public Sans", sans-serif;
+    font-weight: 500;
 }
 .navbar{
     float: right;
@@ -46,5 +47,47 @@ li.nav-item:hover{
 .card{
     margin: 10px;
     border-color: black;
-    border-top: 22px;
+    border-radius: 5px;
+}
+
+.card-body{
+    background-color: rgba(92, 223, 103, 0.87);
+}
+
+footer{
+    background-color: rgb(67, 145, 218);
+    padding: 5px;
+}
+
+.link{
+    float: right;
+}
+
+.popImg{
+    background-color: rgba(115, 115, 115, 0.5);
+    z-index: 10;
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pokeImg{
+    height: 900px;
+}
+
+.closeBut{
+    float: right;
+
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: yellow;
 }

@@ -1,4 +1,5 @@
 const head = document.querySelector('header')
+const main = document.querySelector('main')
 const gridSel = document.getElementsByClassName('grid')
 const grid = gridSel[0]
 const gen1 = `{
@@ -154,6 +155,7 @@ function changeGen(genElement){
 
 	createHeader(genElement)
 	showPokedex(genElement)
+    popPokeImg()
 }
 
 
@@ -189,6 +191,7 @@ function showPokedex(json){
 
 		const pokeImg = document.createElement('img')
 		pokeImg.src = pokedex[i].img
+        pokeImg.id = 'pImg' + i
 
 		const body = document.createElement('div')
 		body.className = "card-body"
@@ -210,7 +213,7 @@ function showPokedex(json){
 		pokeEvo.className = "card-text"
 
 		const pokeHeight = document.createElement('p')
-		pokeHeight.textContent = 'Height: ' + pokedex[i].Height
+		pokeHeight.textContent = 'Height: ' + pokedex[i].height
 		pokeHeight.className = "card-text"
 
 		const pokeAbilities = document.createElement('p')
@@ -227,4 +230,31 @@ function showPokedex(json){
 		body.appendChild(pokeHeight)
 		body.appendChild(pokeAbilities)
 	}
+}
+
+function popPokeImg(){
+    for(var i = 0; i < 3; i++){
+        const imgs = document.getElementById("pImg" + i)
+        imgs.addEventListener('click', function(){
+            var sorse = imgs.src
+            const imgDiv = document.createElement('div')
+            imgDiv.className = "popImg"
+            
+            const butt = document.createElement('button')
+            butt.className = "closeBut"
+            butt.textContent = "Cerrar"
+            butt.addEventListener('click', function(){
+                imgDiv.remove()
+            })
+
+            const img = document.createElement('img')
+            img.className = "pokeImg"
+            img.src = sorse
+
+            main.appendChild(imgDiv)
+            imgDiv.appendChild(butt)
+            imgDiv.appendChild(img)
+        })
+    }
+
 }
